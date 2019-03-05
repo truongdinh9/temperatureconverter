@@ -6,12 +6,13 @@
 </head>
 <body style="text-align: center">
 <h1>Chuyển đổi nhiệt độ </h1>
-Fahrenheit: <input type="number" oninput="changet()" id="temperature" placeholder="Nhập độ F">
+Fahrenheit: <input type="number" oninput="changet(this.value)"  placeholder="Nhập độ F">
 <br/>
 Celcius: <span id="celcius"></span>
 <script>
-function changet() {
-    celcius.innerHTML=(parseFloat(temperature.value)-32)/1.8
+
+function changet(t) {
+    celcius.innerHTML=(parseFloat(t)-32)/1.8
 }
 </script>
 </body>
